@@ -66,8 +66,8 @@ public:
     explicit QtRPCItem(SocketType stype = SocketTcp, ConnectionType ctype = ConnectionPeer, const QString &peerId = QString());
     explicit QtRPCItem(QtRPCNetwork *network);
 
-    bool connect(int functionId, QObject *obj, const char *slot, int timeout = -1);
-    void registerSlot(QObject *obj, const char *slot, int uniqueId, int timeout = -1);
+    bool connect(int functionId, QObject *obj, const char *slot, int timeout = -1/*future*/);
+    void registerSlot(QObject *obj, const char *slot, int uniqueId, int timeout = -1/*future*/);
 
     SocketType socketType() const;
 
